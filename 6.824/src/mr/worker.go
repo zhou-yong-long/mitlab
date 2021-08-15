@@ -118,7 +118,7 @@ func reqTask() ReqTaskReply {
 	reply := ReqTaskReply{}
 
 	// RPC调用
-	if ok := call("Master.HandleTaskReq", &args, &reply); !ok {
+	if ok := call("Coordinator.HandleTaskReq", &args, &reply); !ok {
 		log.Fatal("请求任务失败...")
 	}
 
@@ -136,7 +136,7 @@ func reportTask(taskIndex int, isDone bool) ReportTaskReply {
 	reply := ReportTaskReply{}
 
 	// RPC调用
-	if ok := call("Master.HandleTaskReport", &args, &reply); !ok {
+	if ok := call("Coordinator.HandleTaskReport", &args, &reply); !ok {
 		log.Fatal("报告任务失败...")
 	}
 	return reply
