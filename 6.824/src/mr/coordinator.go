@@ -220,9 +220,9 @@ func (c *Coordinator) addTask(taskIndex int) {
 
 // 检查任务处理是否超时
 func (c *Coordinator) checkTask(taskIndex int) {
-	timeDuration := time.Now().Sub(c.TaskState[taskIndex].StartTime)
-	if timeDuration > MaxTaskRunTime {
-		// 任务超时重新加入队列
-		c.addTask(taskIndex)
-	}
+	//timeDuration := time.Now().Sub(c.TaskState[taskIndex].StartTime)
+	//if timeDuration > MaxTaskRunTime {
+	//	// 任务超时重新加入队列
+	//	c.addTask(taskIndex)
+	//}
 }

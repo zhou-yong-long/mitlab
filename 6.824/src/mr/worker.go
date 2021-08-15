@@ -194,7 +194,7 @@ func DoMapTask(mapf func(string, string) []KeyValue, fileName string, mapTaskInd
 }
 
 func intermediateName(index int, i int) string {
-	return "mr-intermediate" + strconv.Itoa(index) + strconv.Itoa(i)
+	return "mr-intermediate-" + strconv.Itoa(index) + "-" + strconv.Itoa(i)
 }
 
 // 执行reduce任务
